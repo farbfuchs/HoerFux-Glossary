@@ -5,6 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY . .
+COPY yaml_reader.py .
+COPY glossary.yaml .
 
 CMD ["python", "yaml_reader.py"]
