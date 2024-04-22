@@ -1,9 +1,11 @@
-FROM python:3.9-slim-buster
+FROM python:3.12-bullseye
 
-ENV HTTPS_PROXY=http://ukd-proxy.med.tu-dresden.de:80/
-ENV HTTP_PROXY=http://ukd-proxy.med.tu-dresden.de:80/
-ENV http_proxy=http://ukd-proxy.med.tu-dresden.de:80/
-ENV https_proxy=http://ukd-proxy.med.tu-dresden.de:80/
+ARG proxy
+
+ENV HTTPS_PROXY=${proxy}
+ENV HTTP_PROXY=${proxy}
+ENV http_proxy=${proxy}
+ENV https_proxy=${proxy}
 
 WORKDIR /app
 
