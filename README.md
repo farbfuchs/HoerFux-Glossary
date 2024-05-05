@@ -2,7 +2,7 @@
 
 Mit Proxy:
 
-docker build --build-arg proxy=http://ukd-proxy.med.tu-dresden.de:80/ -t hoerfux-glossary .
+docker build --build-arg proxy=http://proxyurl/ -t hoerfux-glossary .
 
 Ohne Proxy
 
